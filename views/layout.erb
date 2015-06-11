@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/application.css">
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<div id='main'>
+  <img id='logo' src=''/>
+  <p class='info'>Simple API to generate SVG browser icon budgets with version</p>
+  <hr>
+
+  <p class='title strong'>Documentation</p>
+  <p class='padding'>To get browser budge send GET request to http://browserbadge.com with parameters 'browser' and 'version'.</p>
+  <p class='padding'>http://browserbadget.com/browser/version</p>
+  <p class='title'>Supported browsers</p>
+  <table id='browsers'>
+    <tr>
+      <td class='image r_border'><img height=100 width=100 src='icons/default/chrome.svg'/></td>
+      <td class='image r_border'><img height=100 width=100 src='icons/default/opera.svg'/></td>
+      <td class='image r_border'><img height=100 width=100 src='icons/default/firefox.svg'/></td>
+      <td class='image r_border'><img height=100 width=100 src='icons/default/ie.svg'/></td>
+      <td class='image'><img height=100 width=100 src='icons/default/safari.svg'/></td>
+    <tr>
+      <td class='browser'>Chrome</td>
+      <td class='browser'>Opera</td>
+      <td class='browser'>Firefox</td>
+      <td class='browser'>Internet Explorer</td>
+      <td class='browser'>Safari</td>
+    </tr>
+  </table>
+  <p class='title'>Parameters:</p>
+  <div class='padding'>
+    <span class='title medium'>browser:</span>
+    <span>chrome | opera | firefox | ie | safari</span>
+  </div>
+  <div class='padding'>
+    <span class='title medium'>version:</span>
+    <span>any 1-3 digits number will be added to logo image with '+'. If not present return logo without any text</span>
+  </div>
+  <p class='title strong'>Example:</p>
+  <table class='padding' id='example'>
+    <tr>
+      <td>http://browserbadge.com/chrome/42</td>
+      <td class='padding'>=&gt;</td>
+      <td class='padding'><img height=50 width=50 src='icons/default/chrome-with-version.svg'/></td>
+    </tr>
+    <tr>
+      <td>http://browserbadge.com/opera</td>
+      <td class='padding'>=&gt;</td>
+      <td class='padding'><img height=50 width=50 src='icons/default/opera.svg'/></td>
+    </tr>
+    <tr>
+      <td>If error in parameters</td>
+      <td class='padding'>=&gt;</td>
+      <td class='padding'><img height=50 width=50 src='icons/default/not_found.svg'/></td>
+    </tr>
+  </table>
+  <p class='title strong'>Using</p>
+    <div class='padding'>
+      <p>You can use generated images in <code>&lt;img&gt;</code> tag. Specify the desired size of img element.</p>
+      <pre>&lt;img height='50' width='50' src='http://browserbadge.com/chrome/42'/&gt;</pre>
+      <p>Or in markdown syntax</p>
+      <pre>![Alt text](http://browserbadge/chrome/42)</pre>
+    </div>
+  </p>
+  <hr>
+  <div id='footer'>
+    <a href='http://www.active-bridge.com/'><p class='title strong'>Active Bridge LLC</p></a>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+#main {
+  width: 800px;
+  margin: auto;
+}
+
+#browsers {
+  margin: auto;
+}
+
+td.r_border {
+  border-right: 2px dotted #ddd;
+}
+
+.info {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.title {
+  color: #3B3B3B;
+  font-weight: bold;
+  font-size: large;
+}
+
+.strong {
+  font-size: x-large;
+}
+
+.medium {
+  font-size: medium;
+}
+
+.image {
+  width: 130px;
+  text-align: center;
+}
+
+.browser {
+  text-align: center;
+}
+
+.padding {
+  padding-left: 20px;
+}
+
+#example {
+  margin: 0;
+}
+
+#footer {
+  float: right;
+}
