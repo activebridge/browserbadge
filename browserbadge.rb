@@ -12,11 +12,9 @@ get /\A\/(chrome|opera|firefox|ie|safari)(?(3)\/|\/?)([0-9]{1,3})?(\/?)\z/ do |b
   else
     file = "public/icons/users/#{browser}-#{version}.svg"
     text = "<rect x='13' y='22' width='18' height='8' rx='1' fill='#555'/>
-      <text font-size='8' x='14' y='29' fill='#fff'>
-      #{version}+</text>"
+      <text font-size='8' x='14' y='29' fill='#fff'>#{version}+</text>"
   end
   unless File.exist?(file)
-    file = "public/icons/users/#{browser}-#{version}.svg"
     code = File.open("public/icons/default/#{browser}.svg").read
     code.insert(code.index('</svg>'), text)
     File.open(file, 'w') { |f| f.write(code) }
