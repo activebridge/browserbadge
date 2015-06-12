@@ -24,7 +24,7 @@ Example:
 Request  | Respond
 -------- | --------
 http://browserbadge.com/chrome/42 | 
-http://browserbadge.com/opera | ![Opera](http://browserbadge.com/opera 'some info')
+http://browserbadge.com/opera | ![Opera](http://browserbadge.com/opera 'some info' =250x250)
 http://browserbadge.com/firefox/1234 | ![not_found](http://browserbadge.com/not_found)
 http://browserbadge.com/explorer | ![not_found](http://browserbadge.com/not_found)
 Or other error in parameters | ![not_found](http://browserbadge.com/not_found)
