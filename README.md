@@ -21,7 +21,7 @@ Parameters:
 
 **version**: any 1-3 digits number will be added to logo image with '+'. If not present return logo without any text
 
-**size**: <size>px. Can be 1..9999 px. All badgets are square. If not present return `32px x 32px`
+**size**: `<size>px`. Can be 1..9999 px. All badgets are square. If not present return `32px x 32px`
 
 Default size of images is `32px x 32px`. But on your page you can set any picture size and SVG icon will be increased or reduced to this size.
 
