@@ -8,6 +8,7 @@ end
 
 get /\A\/(chrome|opera|firefox|ie|safari)(\/[0-9]{1,3})?(\/[0-9]{2,4}px)?\/?\z/ do |browser, version, size|
   file = "public/icons/users/#{browser}" + path_to_file(version) + path_to_file(size) + '.svg'
+  Dir.mkdir('public/icons/users/') unless Dir.exist?('public/icons/users')
   unless File.exist?(file)
     code = File.open("public/icons/default/#{browser}.svg").read
     if !version.nil?
