@@ -29,12 +29,7 @@ Example:
 =
 Request  | Respond
 -------- | --------
-http://browserbadge.com/chrome/42 | ![Chrome](http://browserbadge.com/chrome/42)
-http://browserbadge.com/opera | ![Opera](http://browserbadge.com/opera)
-http://browserbadge.com/firefox/28/64px | ![Firefox](http://browserbadge.com/firefox/28/64px)
-http://browserbadge.com/firefox/1234 | ![not_found](http://browserbadge.com/not_found)
-http://browserbadge.com/explorer | ![not_found](http://browserbadge.com/not_found)
-Or other error in parameters | ![not_found](http://browserbadge.com/not_found)
+
 
 Using
 =
