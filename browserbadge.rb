@@ -24,7 +24,7 @@ get /\A\/(chrome|opera|firefox|ie|safari)(\/[0-9]{1,3})?(\/[0-9]{2,4}px)?\/?\z/ 
 end
 
 not_found do
-  send_file 'public/icons/default/not_found.svg'
+  send_file 'public/icons/default/not_found.png'
 end
 
 def path_to_file(parameter)

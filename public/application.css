@@ -1,10 +1,11 @@
 #main {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
 }
 
 #browsers {
   margin: auto;
+  width: 100%
 }
 
 div.center {
@@ -33,9 +34,13 @@ td.r_border {
 .medium {
   font-size: medium;
 }
+.image-100 {
+  width: 100px;
+  height: 100px;
+}
 
 .image {
-  width: 130px;
+  width: 20%;
   text-align: center;
 }
 
