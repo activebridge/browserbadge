@@ -7,6 +7,10 @@
   margin: auto;
 }
 
+div.center {
+  text-align: center;
+}
+
 td.r_border {
   border-right: 2px dotted #ddd;
 }
