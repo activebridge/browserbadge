@@ -1,17 +1,17 @@
 #main {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
 }
 
-#browsers {
-  margin: auto;
+.inline {
+  display: inline-block;
 }
 
 div.center {
   text-align: center;
 }
 
-td.r_border {
+.r_border {
   border-right: 2px dotted #ddd;
 }
 
@@ -35,22 +35,26 @@ td.r_border {
 }
 
 .image {
-  width: 130px;
-  text-align: center;
-}
-
-.browser {
-  text-align: center;
+  width: 120px;
+  text-align: middle;
+  display: inline-block;
 }
 
 .padding {
   padding-left: 20px;
 }
 
-#example {
-  margin: 0;
-}
-
 #footer {
   float: right;
+}
+
+.request {
+}
+
+.example {
+  padding-bottom: 10px;
+}
+
+.wrap {
+  word-wrap: break-word;
 }

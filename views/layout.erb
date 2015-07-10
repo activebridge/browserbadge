@@ -1,7 +1,6 @@
 <html>
   <head>
     <title>BrowserBadge</title>
-
     <meta name='description' content='Use this tool for generating browser icons with version in SVG' />
     <meta name='keywords' content='browser icons, web design icons, browser icons free, internet browser icons, web browser icon'/>
     <meta name="google-site-verification" content="jmmN-ljBEqGoLcRAI4yj1u6igvPh147lCqSPexGDfR0" />
@@ -11,52 +10,58 @@
     <meta name='og:description' content='Use our new API for generating browser icons with version SVG'/>
     <meta name='og:image' content='http://browserbadge.com/browsers.png'/>
     <meta name='og:updated_time' content='1436175571'/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="/application.css" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-64659918-1']);
-  _gaq.push(['_trackPageview']);
-  setTimeout("_gaq.push(['_trackEvent', '15_seconds', 'read'])",15000);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-64659918-1']);
+      _gaq.push(['_trackPageview']);
+      setTimeout("_gaq.push(['_trackEvent', '15_seconds', 'read'])",15000);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </head>
+
   <body>
     <div id='main'>
       <div class='center'>
         <img id='logo' src='browsers.png'/>
+        <p class='info'>Simple API to generate SVG browser icon budgets with version</p>
       </div>
-      <p class='info'>Simple API to generate SVG browser icon budgets with version</p>
       <iframe src="https://ghbtns.com/github-btn.html?user=activebridge&repo=browserbadge&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
       <hr>
       <p class='title strong'>Documentation</p>
       <p class='padding'>To get browser budge send GET request to http://browserbadge.com with parameters 'browser', 'version' and 'size'.</p>
-      <p class='padding'>http://browserbadget.com/browser/version/size</p>
+      <p class='padding wrap'>http://browserbadget.com/browser/version/size</p>
       <p class='title'>Supported browsers</p>
-      <table id='browsers'>
-        <tr>
-          <td class='image r_border'><img height=100 width=100 src='icons/default/chrome.svg'/></td>
-          <td class='image r_border'><img height=100 width=100 src='icons/default/opera.svg'/></td>
-          <td class='image r_border'><img height=100 width=100 src='icons/default/firefox.svg'/></td>
-          <td class='image r_border'><img height=100 width=100 src='icons/default/ie.svg'/></td>
-          <td class='image'><img height=100 width=100 src='icons/default/safari.svg'/></td>
-        <tr>
-          <td class='browser'>Chrome</td>
-          <td class='browser'>Opera</td>
-          <td class='browser'>Firefox</td>
-          <td class='browser'>Internet Explorer</td>
-          <td class='browser'>Safari</td>
-        </tr>
-      </table>
+
+      <div class='container center'>
+        <div class='image r_border'>
+          <img width='70px' src='http://browserbadge.com/chrome'/>
+          <p>Chrome</p>
+        </div>
+        <div class='image r_border'>
+          <img width='70px' src='http://browserbadge.com/opera'/>
+          <p>Opera</p>
+        </div>
+        <div class='image r_border'>
+          <img width='70px' src='http://browserbadge.com/firefox'/>
+          <p>Firefox</p>
+        </div>
+        <div class='image r_border'>
+          <img width='70px' src='http://browserbadge.com/safari'/>
+          <p>Safari</p>
+        </div>
+        <div class='image'>
+          <img width='70px' src='http://browserbadge.com/ie'/>
+          <p>Internet Explorer</p>
+        </div>
+      </div>
+
       <p class='title'>Parameters:</p>
       <div class='padding'>
         <span class='title medium'>browser:</span>
@@ -71,47 +76,48 @@
         <span>&lt;size&gt;px. Can be 1..9999 px. All badgets are square. If not present return 32px x 32px.</span>
         <span>Default size of images is 32px x 32px. But on your page you can set any picture size and SVG icon will be increased or reduced to this size.</span>
       </div>
+
       <p class='title strong'>Example:</p>
-      <table class='padding' id='example'>
-        <tr>
-          <td>http://browserbadge.com/chrome/42</td>
-          <td class='padding'>=&gt;</td>
-          <td class='padding'><img src='http://browserbadge.com/chrome/42'/></td>
-        </tr>
-        <tr>
-          <td>http://browserbadge.com/opera</td>
-          <td class='padding'>=&gt;</td>
-          <td class='padding'><img src='http://browserbadge.com/opera'/></td>
-        </tr>
-        <tr>
-          <td>http://browserbadge.com/firefox/28/64px</td>
-          <td class='padding'>=&gt;</td>
-          <td class='padding'><img src='http://browserbadge.com/firefox/28/80px'/></td>
-        </tr>
-        <tr>
-          <td>http://browserbadge.com/firefox/1234</td>
-          <td class='padding'>=&gt;</td>
-          <td class='padding'><img src='http://browserbadge.com/firefox/1234'/></td>
-        </tr>
-        <tr>
-          <td>http://browserbadge.com/explorer</td>
-          <td class='padding'>=&gt;</td>
-          <td class='padding'><img src='http://browserbadge.com/explorer'/></td>
-        </tr>
-        <tr>
-          <td>Or other error in parameters</td>
-          <td class='padding'>=&gt;</td>
-          <td class='padding'><img src='http://browserbadge.com/not_found'/></td>
-        </tr>
-      </table>
+      <div class='container padding'>
+        <div class='example'>
+          <span class='request'>http://browserbadge.com/chrome/42</span>
+          <span class='padding'>=&gt;</span>
+          <span class='padding'><img src='http://browserbadge.com/chrome/42'/></span></br>
+        </div>
+        <div class='example'>
+          <span class='request'>http://browserbadge.com/chrome/opera</span>
+          <span class='padding'>=&gt;</span>
+          <span class='padding'><img src='http://browserbadge.com/opera'/></span></br>
+        </div>
+        <div class='example'>
+          <span class='request'>http://browserbadge.com/firefox/28/64px</span>
+          <span class='padding '>=&gt;</span>
+          <span class='padding'><img src='http://browserbadge.com/firefox/28/64px'/></span></br>
+        </div>
+        <div class='example'>
+          <div class='inline request'>
+            <span>http://browserbadge.com/explorer</span></br>
+            <span>http://browserbadge.com/firefox/1234</span></br>
+            <span>http://browserbadge.com/chrome/32/128</span></br>
+            <span>Or other error in parameters</span>
+          </div>
+          <div class='inline'>
+            <span class='padding'>=&gt;</span>
+          </div>
+          <div class='inline'>
+            <span class='padding'><img width='64px' height='64px' src='http://browserbadge.com/not_found'/></span>
+          </div>
+        </div>
+      </div>
+
       <p class='title strong'>Using</p>
         <div class='padding'>
           <p>You can use generated images in <code>&lt;img&gt;</code> tag. Specify the desired size of img elemen or just send size as parametert.</p>
-          <pre>&lt;img height='50' width='50' src='http://browserbadge.com/chrome/42'/&gt;</pre>
-          <pre>&lt;img src='http://browserbadge.com/chrome/42/50px'/&gt;</pre>
+          <pre class='wrap'>&lt;img height='50' width='50' src='http://browserbadge.com/chrome/42'/&gt;</pre>
+          <pre class='wrap'>&lt;img src='http://browserbadge.com/chrome/42/50px'/&gt;</pre>
           <p>Or in markdown syntax. Some markdown processors support inclusion of HTML, so you can use this tip.</p>
-          <pre>![Alt text](http://browserbadge/chrome/42)</pre>
-          <pre>![Alt text](http://browserbadge/chrome/42/50px)</pre>
+          <pre class='wrap'>![Alt text](http://browserbadge/chrome/42)</pre>
+          <pre class='wrap'>![Alt text](http://browserbadge/chrome/42/50px)</pre>
         </div>
       </p>
       <hr>
