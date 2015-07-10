@@ -3,16 +3,15 @@
   margin: auto;
 }
 
-#browsers {
-  margin: auto;
-  width: 100%
+.inline {
+  display: inline-block;
 }
 
 div.center {
   text-align: center;
 }
 
-td.r_border {
+.r_border {
   border-right: 2px dotted #ddd;
 }
 
@@ -34,28 +33,28 @@ td.r_border {
 .medium {
   font-size: medium;
 }
-.image-100 {
-  width: 100px;
-  height: 100px;
-}
 
 .image {
-  width: 20%;
-  text-align: center;
-}
-
-.browser {
-  text-align: center;
+  width: 120px;
+  text-align: middle;
+  display: inline-block;
 }
 
 .padding {
   padding-left: 20px;
 }
 
-#example {
-  margin: 0;
-}
-
 #footer {
   float: right;
+}
+
+.request {
+}
+
+.example {
+  padding-bottom: 10px;
+}
+
+.wrap {
+  word-wrap: break-word;
 }
