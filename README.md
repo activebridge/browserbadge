@@ -38,10 +38,10 @@ Or other error in parameters | ![not_found](http://browserbadge.com/not_found)
 
 Using
 =
-You can use generated images in `<img>` tag. Specify the desired size of `<img>` element or just send size as parameter
+You can use generated images in `<object>` tag. Specify the desired size of `<object>` element or just send size as parameter
 ```
-<img height='50' width='50' src='http://browserbadge.com/chrome/42'/>
-<img src='http://browserbadge.com/chrome/42/50px'/>
+<object width='64px' type="image/svg+xml" data="http://browserbadge/chrome/42">Your browser does not support SVG</object>
+<object type="image/svg+xml" data="http://browserbadge/chrome/42/64px">Your browser does not support SVG</object>
 ```
 Or in markdown syntax. Some markdown processors support inclusion of HTML, so you can use this tip.
 ```

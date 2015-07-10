@@ -80,41 +80,41 @@
       <p class='title strong'>Example:</p>
       <div class='container padding'>
         <div class='example'>
-          <span class='request'>http://browserbadge.com/chrome/42</span>
+          <a href='http://browserbadge.com/chrome/42' class='request'>http://browserbadge.com/chrome/42</a>
           <span class='padding'>=&gt;</span>
-          <span class='padding'><img src='http://browserbadge.com/chrome/42'/></span></br>
+          <object type="image/svg+xml" data="chrome/42">Your browser does not support SVG</object>
         </div>
         <div class='example'>
-          <span class='request'>http://browserbadge.com/chrome/opera</span>
+          <a href='http://browserbadge.com/opera' class='request'>http://browserbadge.com/opera</a>
           <span class='padding'>=&gt;</span>
-          <span class='padding'><img src='http://browserbadge.com/opera'/></span></br>
+          <object type="image/svg+xml" data="opera">Your browser does not support SVG</object>
         </div>
         <div class='example'>
-          <span class='request'>http://browserbadge.com/firefox/28/64px</span>
-          <span class='padding '>=&gt;</span>
-          <span class='padding'><img src='http://browserbadge.com/firefox/28/64px'/></span></br>
+          <a href='http://browserbadge.com/firefox/28/64px' class='request'>http://browserbadge.com/firefox/28/64px</a>
+          <span class='padding'>=&gt;</span>
+          <object type="image/svg+xml" data="firefox/28/64px">Your browser does not support SVG</object>
         </div>
         <div class='example'>
           <div class='inline request'>
-            <span>http://browserbadge.com/explorer</span></br>
-            <span>http://browserbadge.com/firefox/1234</span></br>
-            <span>http://browserbadge.com/chrome/32/128</span></br>
-            <span>Or other error in parameters</span>
+            <a href='http://browserbadge.com/explorer'>http://browserbadge.com/explorer</a></br>
+            <a href='http://browserbadge.com/firefox/1234'>http://browserbadge.com/firefox/1234</a></br>
+            <a href='http://browserbadge.com/chrome/32/128'>http://browserbadge.com/chrome/32/128</a></br>
+            <a href='http://browserbadge.com/not_found'>Or other error in parameters</a>
           </div>
           <div class='inline'>
             <span class='padding'>=&gt;</span>
           </div>
           <div class='inline'>
-            <span class='padding'><img width='64px' height='64px' src='http://browserbadge.com/not_found'/></span>
+            <span class='padding'><img width='64px' height='64px' src='not_found'/></span>
           </div>
         </div>
       </div>
 
       <p class='title strong'>Using</p>
         <div class='padding'>
-          <p>You can use generated images in <code>&lt;img&gt;</code> tag. Specify the desired size of img elemen or just send size as parametert.</p>
-          <pre class='wrap'>&lt;img height='50' width='50' src='http://browserbadge.com/chrome/42'/&gt;</pre>
-          <pre class='wrap'>&lt;img src='http://browserbadge.com/chrome/42/50px'/&gt;</pre>
+          <p>You can use generated images in <code>&lt;object&gt;</code> tag. Specify the desired size of element or just send size as parametert.</p>
+          <pre class='wrap'>&lt;object width='64px' type="image/svg+xml" data="http://browserbadge/chrome/42"&gt;Your browser does not support SVG&lt;/object&gt;</pre>
+          <pre class='wrap'>&lt;object type="image/svg+xml" data="http://browserbadge/chrome/42/64px"&gt;Your browser does not support SVG&lt;/object&gt;</pre>
           <p>Or in markdown syntax. Some markdown processors support inclusion of HTML, so you can use this tip.</p>
           <pre class='wrap'>![Alt text](http://browserbadge/chrome/42)</pre>
           <pre class='wrap'>![Alt text](http://browserbadge/chrome/42/50px)</pre>
