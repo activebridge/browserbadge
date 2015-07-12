@@ -11,7 +11,7 @@ To get browser budge send GET request to http://browserbadge.com with parameters
 
 Supported browsers
 -
-Chrome  | Opera | Firefox | Safari | Internet Explorer
+Chrome  | Opera | Firefox | Safari | IE
 -------- | -------- | -------- | -------- | --------
 ![chrome](http://browserbadge.com/chrome) | ![Opera](http://browserbadge.com/opera) | ![firefox](http://browserbadge.com/firefox) | ![safari](http://browserbadge.com/safari) |  ![ie](http://browserbadge.com/ie)
 
@@ -38,10 +38,10 @@ Or other error in parameters | ![not_found](http://browserbadge.com/not_found)
 
 Using
 =
-You can use generated images in `<object>` tag. Specify the desired size of `<object>` element or just send size as parameter
+You can use generated images in `<img>` tag. Specify the desired size of `<img>` element or just send size as parameter
 ```
-<object width='64px' type="image/svg+xml" data="http://browserbadge/chrome/42">Your browser does not support SVG</object>
-<object type="image/svg+xml" data="http://browserbadge/chrome/42/64px">Your browser does not support SVG</object>
+<img width='64px' src="http://browserbadge/chrome/42"/>
+<img src="http://browserbadge/chrome/42/64px"/>
 ```
 Or in markdown syntax. Some markdown processors support inclusion of HTML, so you can use this tip.
 ```
