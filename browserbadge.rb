@@ -14,7 +14,7 @@ get /\A\/(chrome|opera|firefox|ie|safari)(\/[0-9]{1,3})?(\/[0-9]{2,4}px)?\/?\z/ 
     if !version.nil?
       version.delete! '/'
       width = 8.7 + version.length * 6
-      text = "<defs><linearGradient id='grad' x1='0%' y1='0%' x2='0%' y2='100%'><stop offset='0%' style='stop-color:rgb(85,85,85); stop-opacity:1'/><stop offset='100%' style='stop-color:rgb(51, 51, 51); stop-opacity:1'/></linearGradient></defs><rect x='#{32 - width}' y='20' width='#{width}' height='10' rx='1' fill='url(#grad)'/><text font-size='12' x='#{32 - width + 1}' y='29' fill='#fff'>#{version}+</text>"
+      text = "<defs><linearGradient id='grad' x1='0%' y1='0%' x2='0%' y2='100%'><stop offset='0%' style='stop-color:rgb(85,85,85); stop-opacity:1'/><stop offset='100%' style='stop-color:rgb(51, 51, 51); stop-opacity:1'/></linearGradient></defs><rect x='26%' y='66%' width='74%' height='34%' rx='1' fill='url(#grad)'/><text font-size='11' x='28%' y='95%' fill='#fff' font-family='Verdana'>#{version}+</text>"
       code.insert(code.index('</svg>'), text)
     end
     code.gsub!('32px', size.delete('/')) if !size.nil?
