@@ -1,0 +1,72 @@
+<div class='center'>
+  <img src='browsers.png' alt='Browser Badges'/>
+  <h1 class='info'>Simple API to generate SVG browser icon budgets</h1>
+</div>
+<iframe src="https://ghbtns.com/github-btn.html?user=activebridge&repo=browserbadge&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+<hr>
+<h2>Documentation</h2>
+<p>To get browser budge send GET request to http://browserbadge.com with parameters 'browser', 'version' and 'size'.</p>
+<pre>http://browserbadge.com/browser/version/size</pre>
+<h2>Supported browsers:</h2>
+
+<ul class='center'>
+  <li>
+    <img width='70px' src='http://browserbadge.com/chrome'/>
+    <p>Chrome</p>
+  </li>
+  <li>
+    <img width='70px' src='http://browserbadge.com/opera'/>
+    <p>Opera</p>
+  </li>
+  <li>
+    <img width='70px' src='http://browserbadge.com/firefox'/>
+    <p>Firefox</p>
+  </li>
+  <li>
+    <img width='70px' src='http://browserbadge.com/safari'/>
+    <p>Safari</p>
+  </li>
+  <li>
+    <img width='70px' src='http://browserbadge.com/ie'/>
+    <p>IE</p>
+  </li>
+</ul>
+
+<h2>Parameters:</h2>
+<dl>
+  <dt>browser:</dt>
+  <dd>chrome | opera | firefox | ie | safari</dd>
+  <dt>version:</dt>
+  <dd>any 1-3 digits number will be added to logo image with '+'. If not present return logo without any text</dd>
+  <dt>size:</dt>
+  <dd>&lt;size&gt;px. Can be 1..9999 px. All badgets are square. Default is 32px.</dd>
+</dl>
+
+<h2>Example:</h2>
+<div class='examples'>
+  <div>
+    <a href='chrome/42'>http://browserbadge.com/chrome/42</a>
+    <img src="chrome/42/"/>
+  </div>
+  <div>
+    <a href='opera'>http://browserbadge.com/opera</a>
+    <img src="opera"/>
+  </div>
+  <div>
+    <a href='firefox/28/64px' class='request'>http://browserbadge.com/firefox/28/64px</a>
+    <img src="firefox/28/64px"/>
+  </div>
+  <div>
+    <a href='http://browserbadge.com/invalid_url'>http://browserbadge.com/invalid_url</a>
+    <img width='64px' height='64px' src='not_found'/>
+  </div>
+</div>
+
+<h2>Using:</h2>
+<p>You can use generated images in <code>&lt;img&gt;</code> tag. Specify the desired size of element or just send size as parametert.</p>
+<pre>&lt;img width='64px' src="http://browserbadge/chrome/42"&gt;</pre>
+<pre>&lt;img src="http://browserbadge/chrome/42/64px"&gt;</pre>
+<p>Or Markdown syntax:</p>
+<pre>![Alt text](http://browserbadge/chrome/42)</pre>
+<pre>![Alt text](http://browserbadge/chrome/42/50px)</pre>
+

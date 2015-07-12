@@ -11,6 +11,7 @@
     <meta name='og:image' content='http://browserbadge.com/browsers.png'/>
     <meta name='og:updated_time' content='1436175571'/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     <link rel="stylesheet" href="/application.css" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <script type="text/javascript">
@@ -27,103 +28,10 @@
   </head>
 
   <body>
-    <div id='main'>
-      <div class='center'>
-        <img id='logo' src='browsers.png'/>
-        <p class='info'>Simple API to generate SVG browser icon budgets with version</p>
-      </div>
-      <iframe src="https://ghbtns.com/github-btn.html?user=activebridge&repo=browserbadge&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-      <hr>
-      <p class='title strong'>Documentation</p>
-      <p class='padding'>To get browser budge send GET request to http://browserbadge.com with parameters 'browser', 'version' and 'size'.</p>
-      <p class='padding wrap'>http://browserbadget.com/browser/version/size</p>
-      <p class='title'>Supported browsers</p>
-
-      <div class='container center'>
-        <div class='image r_border'>
-          <img width='70px' src='http://browserbadge.com/chrome'/>
-          <p>Chrome</p>
-        </div>
-        <div class='image r_border'>
-          <img width='70px' src='http://browserbadge.com/opera'/>
-          <p>Opera</p>
-        </div>
-        <div class='image r_border'>
-          <img width='70px' src='http://browserbadge.com/firefox'/>
-          <p>Firefox</p>
-        </div>
-        <div class='image r_border'>
-          <img width='70px' src='http://browserbadge.com/safari'/>
-          <p>Safari</p>
-        </div>
-        <div class='image'>
-          <img width='70px' src='http://browserbadge.com/ie'/>
-          <p>Internet Explorer</p>
-        </div>
-      </div>
-
-      <p class='title'>Parameters:</p>
-      <div class='padding'>
-        <span class='title medium'>browser:</span>
-        <span>chrome | opera | firefox | ie | safari</span>
-      </div>
-      <div class='padding'>
-        <span class='title medium'>version:</span>
-        <span>any 1-3 digits number will be added to logo image with '+'. If not present return logo without any text</span>
-      </div>
-      <div class='padding'>
-        <span class='title medium'>size:</span>
-        <span>&lt;size&gt;px. Can be 1..9999 px. All badgets are square. If not present return 32px x 32px.</span>
-        <span>Default size of images is 32px x 32px. But on your page you can set any picture size and SVG icon will be increased or reduced to this size.</span>
-      </div>
-
-      <p class='title strong'>Example:</p>
-      <div class='container padding'>
-        <div class='example'>
-          <a href='http://browserbadge.com/chrome/42' class='request'>http://browserbadge.com/chrome/42</a>
-          <span class='padding'>=&gt;</span>
-          <object type="image/svg+xml" data="chrome/42">Your browser does not support SVG</object>
-        </div>
-        <div class='example'>
-          <a href='http://browserbadge.com/opera' class='request'>http://browserbadge.com/opera</a>
-          <span class='padding'>=&gt;</span>
-          <object type="image/svg+xml" data="opera">Your browser does not support SVG</object>
-        </div>
-        <div class='example'>
-          <a href='http://browserbadge.com/firefox/28/64px' class='request'>http://browserbadge.com/firefox/28/64px</a>
-          <span class='padding'>=&gt;</span>
-          <object type="image/svg+xml" data="firefox/28/64px">Your browser does not support SVG</object>
-        </div>
-        <div class='example'>
-          <div class='inline request'>
-            <a href='http://browserbadge.com/explorer'>http://browserbadge.com/explorer</a></br>
-            <a href='http://browserbadge.com/firefox/1234'>http://browserbadge.com/firefox/1234</a></br>
-            <a href='http://browserbadge.com/chrome/32/128'>http://browserbadge.com/chrome/32/128</a></br>
-            <a href='http://browserbadge.com/not_found'>Or other error in parameters</a>
-          </div>
-          <div class='inline'>
-            <span class='padding'>=&gt;</span>
-          </div>
-          <div class='inline'>
-            <span class='padding'><img width='64px' height='64px' src='not_found'/></span>
-          </div>
-        </div>
-      </div>
-
-      <p class='title strong'>Using</p>
-        <div class='padding'>
-          <p>You can use generated images in <code>&lt;object&gt;</code> tag. Specify the desired size of element or just send size as parametert.</p>
-          <pre class='wrap'>&lt;object width='64px' type="image/svg+xml" data="http://browserbadge/chrome/42"&gt;Your browser does not support SVG&lt;/object&gt;</pre>
-          <pre class='wrap'>&lt;object type="image/svg+xml" data="http://browserbadge/chrome/42/64px"&gt;Your browser does not support SVG&lt;/object&gt;</pre>
-          <p>Or in markdown syntax. Some markdown processors support inclusion of HTML, so you can use this tip.</p>
-          <pre class='wrap'>![Alt text](http://browserbadge/chrome/42)</pre>
-          <pre class='wrap'>![Alt text](http://browserbadge/chrome/42/50px)</pre>
-        </div>
-      </p>
-      <hr>
-      <div id='footer'>
-        <a href='http://www.active-bridge.com/'><p class='title strong'>Active Bridge, LLC</p></a>
-      </div>
-    </div>
+    <%= yield %>
+    <hr>
+    <footer>
+      <a href='http://www.active-bridge.com/' target='_blank'>Active Bridge, LLC</a>
+    </footer>
   </body>
 </html>
