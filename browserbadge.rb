@@ -12,7 +12,7 @@ BG = %{
 
 TEXT = "<text font-size='11' x='28%%' y='95%%' fill='#fff' font-family='Verdana'>%s+</text>"
 
-set :public_folder, "#{File.dirname(__FILE__)} /public"
+set :public_folder, "#{File.dirname(__FILE__)}/public"
 
 get '/' { erb :index }
 
