@@ -14,9 +14,11 @@ TEXT = "<text font-size='11' x='28%%' y='95%%' fill='#fff' font-family='Verdana'
 
 set :public_folder, "#{File.dirname(__FILE__)}/public"
 
-get '/' { erb :index }
+get '/' do
+  erb :index
+end
 
-get /\A\/(chrome|opera|firefox|ie|safari)\/?([0-9]{1,3})?\/?([0-9]{2,4}px)?\/?\z/ do |browser, version, size|
+get(%r{\A\/(chrome|opera|firefox|ie|safari)\/?([0-9]{1,3})?\/?([0-9]{2,4}px)?\/?\z}) do |browser, version, size|
   file = "public/icons/#{browser}-#{version}-#{size}.svg"
   File.open(file, 'w') { |f| f.write(svg(browser, version, size)) } unless File.exist?(file)
   send_file file
